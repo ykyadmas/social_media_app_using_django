@@ -12,10 +12,12 @@
 <a class="bg-red" href={% url 'create_room' %}>Create Form</a>
 {% for room in rooms %}
  
+<div class="bg-red-700 w-32">
 <a href={% url 'update_room' room.id%}>Edit</a>
+</div>
  
 <span>@{{room.host.username}}</span>
-
+<a href={% url 'delete_room' room.id %}>DELETE</a>
 <h1>{{room.id}}---><a href={% url 'room' room.id %}>{{room.name}}</a></h1>
 <small>{{room.topic.name}}</small>
 
