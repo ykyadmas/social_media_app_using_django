@@ -1,0 +1,33 @@
+{% extends "main.html" %}
+
+<DOCTYPE html>
+
+<html lang="en">
+<head>
+</head>
+<body>
+
+
+
+<div>
+
+{% block content %}
+
+
+<form method="POST" action>
+
+ {% csrf_token %}
+ 
+ {{form.as_p}}
+ 
+ <input class="bg-yellow-900 text-white round rounded-full w-28 ml-36 mt-5" type="Submit" value="submit"/>
+ 
+</form>
+
+
+
+
+{% endblock content %}
+</div>
+</body>
+</html>
